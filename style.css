@@ -1,0 +1,431 @@
+ul,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Lato;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    line-height: 50px;
+    background: black;
+    height: 50px;
+    z-index: 99;
+}
+
+nav ul {
+    display: flex;
+    vertical-align: middle;
+}
+
+
+nav li {
+    height: 50px;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    color: white;
+    padding: 0px 25px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    background: #eee;
+    color: black;
+}
+
+
+@media (max-width: 600px) {
+    nav ul li a {
+        color: black;
+    }
+    nav a:hover {
+        background: black;
+    }
+    #home {
+        color: white;
+    }
+
+    #home:hover {
+        background: #eee;
+        color: black;
+    }
+}
+
+.drop-down-content {
+    display: none;
+    color: black;
+    background: white;
+    position: relative;
+    right: 95px;
+    top: 50px;
+}
+
+.drop-down:hover + .drop-down-content {
+    display: block;
+    background: white;
+}
+
+
+.drop-down-content:hover {
+    display: block;
+    background: white;
+}
+
+.space:hover {
+    background: black;
+}
+
+.space {
+    width: 100%;
+}
+
+#header {
+    position: relative;
+    top: 50px;
+}
+
+#header img {
+    width: 100%;
+    height: auto;
+}
+
+#caption {
+    width: 300px;
+    text-align: center;
+    margin: 0px auto;
+    color: white;
+    position: relative;
+    top: -150px;
+}
+
+@media (max-width: 600px) {
+    #caption {
+        color: transparent;
+    }
+}
+
+#description {
+    text-align: center;
+    max-width: 800px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    max-width: 800px;
+}
+
+#description h1 {
+    text-transform: uppercase;
+}
+
+#description-paragraph {
+    text-align: justify;
+    margin: 0px auto 25px auto;
+}
+
+#band-members {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around; 
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.band-member {
+    width: 20%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.band-member img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    #band-members {
+        display: block;
+        margin: 0px auto;
+    }
+
+    .band-member {
+        width: 60%;
+        margin: 0px auto;
+    }
+}
+
+#tour-dates {
+    position: relative;
+    background: black;
+    text-align: center;
+    justify-items: center;
+    /* padding-top: 50px; */
+}
+
+#tour-dates-header {
+    position: relative;
+    top: 50px;
+}
+
+#tour-dates h1 {
+    color: white;
+    text-transform: uppercase;
+}
+
+#tour-dates span {
+    color: #999;
+}
+
+#tour-dates-grid {
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    grid-template-rows: repeat(4, 110px);
+    grid-gap: 20px;
+    grid-template-areas:
+    "months months months"
+    "location-1 location-2 location-3"
+    "location-1 location-2 location-3"
+    "location-1 location-2 location-3"
+    "location-1 location-2 location-3";  
+    padding: 100px;
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+
+@media (max-width: 600px) {
+    #tour-dates-grid {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+#months {
+    grid-area: months;
+    text-align: left;
+}
+
+#months li {
+    line-height: 36px;
+    border-bottom: 1px solid #999;
+    list-style: none;
+    padding-left: 20px;
+}
+
+#months span {
+    color: white;
+}
+
+.sold-out {
+    margin-left: 20px;
+    background: red;
+    padding: 3px 6px;
+}
+
+.number-of-tickets {
+    float: right;
+    height: 25px;
+    width: 25px;
+    background: navy;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 40px;
+    margin-top: 5px;
+}
+
+#location-1 {
+    grid-area: location-1;
+    min-height: 250px;
+}
+#location-2 {
+    grid-area: location-2;
+}
+
+#location-3 {
+    grid-area: location-3;
+}
+
+.box {
+    background: #eee;
+}
+.box img {
+    width: 100%;
+}
+
+.box img:hover {
+    filter: brightness(50%);
+}
+
+.box-text {
+    text-align: left;
+    margin: 15px;
+}
+
+.buy-tickets {
+    background: black;
+    color: white;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    line-height: 36px;
+}
+
+.buy-tickets:hover {
+    background: #ccc;
+    color: black;
+}
+
+#contact {
+    position: relative;
+    background: white;
+    overflow: hidden;
+    padding: 80px;
+}
+
+#contact h2 {
+    text-transform: uppercase;
+}
+
+#contact span {
+    padding-bottom: 200px;
+}
+
+#contact ul {
+    display: block;
+    text-align: left;
+}
+
+#contact-header {
+    margin: 0px auto;
+}
+
+#contact-left-and-right {
+    justify-content: space-around;
+    display: flex;
+    max-width: 800px;
+    margin-top: 50px;
+    margin: 50px auto 0px auto;
+}
+
+#contact li {
+    list-style: none;
+}
+
+#contact-left {
+    font-size: 16px;
+    line-height: 2;
+}
+
+#name {
+    grid-area: name;
+}
+
+#email {
+    grid-area: email;
+}
+
+#message {
+    grid-area: message;
+}
+
+#send-container {
+    display: flex;
+}
+
+
+#send {
+    background: black;
+    color: white;
+    line-height: 2.3;
+    width: 100px;
+}
+
+#send:hover {
+    background: #999;
+    color: white;
+}
+
+#contact-right input[type="text"] {
+    font-size: 16px;
+    width: 100%;
+}
+
+#contact-right {
+    width: 50%;
+    float: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 30px;
+    grid-template-areas:
+    "name email"
+    "message message";
+    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+}
+
+@media (max-width: 600px) {
+    #contact-left-and-right {
+        flex-direction: column;
+    }
+    #contact-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #contact {
+        padding: 20px;
+    }
+
+}
+
+#footer-img img {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+footer {
+    text-align: center;
+    overflow-y: hidden;
+    line-height: 50px;
+    top: -30px;
+    margin: 0px;
+    margin-right: 50px;
+    width: 100%;
+    position: relative;
+    height: 50px;
+    background: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
